@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports | PSMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reports.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+    <div class="sidebar-title">
+        Faculty Dashboard
+    </div>
+
+    <ul class="menu">
+        <li class="active">
+            <a href="./facultydash.html">📟 Dashboard</a>
+        </li>
+        <li>
+            <a href="./livemonitoring.html">📱 Live Monitoring</a>
+        </li>
+        <li>
+            <a href="./practical-dashboard.html">📒 Manage Practicals</a>
+        </li>
+        <li>
+            <a href="./practicalevaluation.html">📋 Evaluation Practical</a>
+        </li>
+        <li>
+            <a href="./reports.html">📋 Reports</a>
+        </li>
+        <li>
+            <a href="./index.html">🚪 Logout</a>
+        </li>
+    </ul>
+</aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <div class="topbar">
+            <h2>Reports</h2>
+            <input type="text" placeholder="Search user..." class="search">
+        </div>
+
+        <!-- TABS -->
+        <!-- TABS -->
+<div class="tabs">
+    <button class="tab active" onclick="showReport('attendance')">
+        Attendance Report
+    </button>
+    <button class="tab" onclick="showReport('duration')">
+        Time Spent  Report
+    </button>
+    <button class="tab" onclick="showReport('practical')">
+        Practical-wise Report
+    </button>
+</div>
+
+
+        <!-- FILTERS -->
+        <!-- ATTENDANCE REPORT -->
+<!-- SEARCH & FILTER BAR -->
+<div class="filters">
+
+    <!-- DATE FILTER -->
+    <div class="filter-group">
+        <label>Date</label>
+        <select>
+            <option value="">Select Date Range</option>
+            <option>Today</option>
+            <option>This Week</option>
+            <option>This Month</option>
+        </select>
+    </div>
+
+    <!-- DEPARTMENT FILTER -->
+    <div class="filter-group">
+        <label>Department</label>
+        <select>
+            <option value="">Select Department</option>
+            <option>Computer</option>
+            <option>IT</option>
+            <option>AIDS</option>
+        </select>
+    </div>
+
+    <!-- SUBJECT FILTER -->
+    <div class="filter-group">
+        <label>Subject</label>
+        <select>
+            <option value="">Select Subject</option>
+            <option>Data Structures</option>
+            <option>DBMS</option>
+            <option>Computer Network</option>
+        </select>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="filter-group">
+        <label>Search Student</label>
+        <input type="text" placeholder="Name or Roll No">
+    </div>
+
+    <div class="filter-group">
+        <button class="btn outline">Apply Filter</button>
+        
+    </div>
+
+</div>
+
+
+
+
+        <!-- TABLE -->
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th>Total Practicals</th>
+                        <th>Marks Submitted</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>PO21</td>
+                        <td>25m</td>
+                        <td><input type="text" value="5"></td>
+                        <td>
+                            <select>
+                                <option>Well Done</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mike Stone</td>
+                        <td>MP98</td>
+                        <td>25m</td>
+                        <td><input type="text" value="7"></td>
+                        <td>
+                            <select>
+                                <option>Manage one step</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Alice Brown</td>
+                        <td>PO52</td>
+                        <td>20m</td>
+                        <td><input type="text" value="Absent"></td>
+                        <td>
+                            <select>
+                                <option>—</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Alex Miles</td>
+                        <td>WC11</td>
+                        <td>20m</td>
+                        <td>
+                            <select>
+                                <option>Incomplete</option>
+                            </select>
+                        </td>
+                        <td>
+                           <button class="btn success" onclick="showSubmitAlert()">Submitted</button>
+
+                            
+                        </td>
+                         <td>
+                          
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<!-- ACTION BUTTON ROW -->
+<div class="action-row">
+    
+
+    <div class="right-actions">
+        <button class="btn outline" onclick="exportCSV()">⬇ Export CSV</button>
+        <button class="btn primary" onclick="downloadPDF()">⬇ Download PDF</button>
+    </div>
+</div>
+
+    </main>
+    
+
+</div>
+
+<script>
+    
+function showSubmitAlert() {
+    alert("✅ Report submitted successfully!");
+}
+
+function showReport(reportId) {
+
+    // remove active from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // hide all reports
+    document.querySelectorAll('.report-section').forEach(section => {
+        section.classList.remove('active');
+    });
+
+    // activate clicked tab
+    event.target.classList.add('active');
+
+    // show selected report
+    document.getElementById(reportId).classList.add('active');
+    
+function exportCSV() {
+    alert("CSV export triggered");
+}
+
+function downloadPDF() {
+    alert("PDF download triggered");
+}
+
+
+}
+</script>
+
+
+</body>
+</html>

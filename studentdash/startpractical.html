@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Practical | PSMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/startpractical.css">
+     <script src="../assets/javascript/startpractical.js" defer></script>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="sidebar-title">Student Dashboard</h2>
+        <ul class="menu">
+            <li><a href="#">📟 Dashboard</a></li>
+            <li><a href="./studentprofile.html">👩‍🎓 Profile</a></li>
+            <li><a href="./startsession.html">🖥️ Start Practical</a></li>
+            <li><a href="./summary.html">📜 History</a></li>
+            <li><a href="../facultydash/index.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- PRACTICAL AREA -->
+    <main class="practical-area">
+
+        <!-- HEADER -->
+        <div class="top-header">
+            <div>
+                <h2>Practical Session Started</h2>
+                <p>Your session is currently active</p>
+            </div>
+            <div class="timer" id="timer">00:00:00</div>
+        </div>
+
+        <!-- STATUS -->
+        <div class="status-bar">
+            <span>Status: <b>Active</b></span>
+            <div class="progress">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- DETAILS -->
+        <section class="details">
+            <h3>Session Details</h3>
+            <div class="grid">
+                <div class="field"><label>Subject</label><input value="Java" readonly></div>
+                <div class="field"><label>Practical No.</label><input value="01" readonly></div>
+                <div class="field"><label>Title</label><input value="Basic of Java" readonly></div>
+                <div class="field"><label>Start Time</label><input id="startTime" readonly></div>
+                <div class="field"><label>Duration</label><input id="duration" value="00:00:00" readonly></div>
+                <div class="field"><label>Status</label><input value="Active" readonly></div>
+            </div>
+        </section>
+
+        <!-- CAMERA CENTER -->
+        <section class="camera-action">
+            <div class="camera-section">
+                <h3>Live Camera Preview</h3>
+                <video id="video" autoplay muted></video>
+            </div>
+                 <div class="info">
+        You may minimize the window and continue your practical work.
+        Session will remain active.
+    </div>
+
+            <div class="end-session">
+                <button onclick="openModal()">End Practical Session</button>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <h3>End Practical Session?</h3>
+        <p>This will stop the timer and camera.</p>
+        <div class="modal-actions">
+            <button class="cancel" onclick="closeModal()">Cancel</button>
+            <button class="confirm" onclick="endSession()">End</button>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

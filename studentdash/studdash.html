@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- SAME CSS -->
+    <link rel="stylesheet" href="../assets/css/facultydash.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="logo-text">
+                <h2>Student Portal</h2>
+                <p>Learning Dashboard</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="#">📊 Dashboard</a>
+            </li>
+
+            <li>
+                <a href="#">📘 My Practicals</a>
+            </li>
+
+            <li>
+                <a href="#">🧪 Live Session</a>
+            </li>
+
+            <li>
+                <a href="#">📈 My Progress</a>
+            </li>
+
+            <li>
+                <a href="#">📄 Reports</a>
+            </li>
+
+            <li>
+                <a href="#">👨‍🎓 Profile</a>
+            </li>
+
+            <li>
+                <a href="#">🔓 Logout</a>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- =============== END SIDEBAR =============== -->
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <div class="main-content">
+
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Student Dashboard</h1>
+                <p>Track your practicals & learning progress</p>
+            </div>
+
+            <div class="header-right">
+                <button class="icon-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge"></span>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+
+                <div class="divider"></div>
+
+                <div class="user-profile">
+                    <div class="user-avatar">SS</div>
+                    <div class="user-info">
+                        <h3>Shruti Sardesai</h3>
+                        <p>Computer Engineering</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+        <!-- =============== END HEADER =============== -->
+
+        <!-- ================= CONTENT AREA ================= -->
+        <div class="content-area">
+
+            <!-- ===== STATS GRID ===== -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon primary">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <div class="stat-label">Total Practicals</div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-description">Assigned this semester</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-label">Completed</div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-description">Successfully submitted</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon warning">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="stat-label">Pending</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-description">Yet to submit</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="stat-label">Overall Progress</div>
+                    <div class="stat-value">76%</div>
+                    <div class="stat-description">Average performance</div>
+                </div>
+
+            </div>
+
+            <!-- ===== FILTER SECTION ===== -->
+            <div class="filters-section">
+                <div class="filters-grid">
+
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search practicals...">
+                    </div>
+
+                    <select>
+                        <option>Select Subject</option>
+                        <option>Data Structures</option>
+                        <option>DBMS</option>
+                        <option>Computer Networks</option>
+                        <option>Algorithms</option>
+                    </select>
+
+                    <select>
+                        <option>Status</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>In Progress</option>
+                    </select>
+
+                    <button class="export-btn">
+                        <i class="fas fa-download"></i>
+                        Download Report
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- ===== TABLE SECTION ===== -->
+            <div class="table-section">
+
+                <div class="table-header">
+                    <h2>My Practical Status</h2>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Practical Title</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Last Updated</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Data Structures</td>
+                                <td>Stack Implementation</td>
+                                <td>
+                                    <span class="status-badge active">
+                                        <span class="status-dot"></span>
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span class="progress-text">100%</span>
+                                    </div>
+                                </td>
+                                <td>Today</td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>DBMS</td>
+                                <td>SQL Queries</td>
+                                <td>
+                                    <span class="status-badge idle">
+                                        <span class="status-dot"></span>
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 60%"></div>
+                                        </div>
+                                        <span class="progress-text">60%</span>
+                                    </div>
+                                </td>
+                                <td>Yesterday</td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i class="fas fa-upload"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- =============== END CONTENT AREA =============== -->
+
+    </div>
+    <!-- =============== END MAIN CONTENT =============== -->
+
+</div>
+
+</body>
+</html>

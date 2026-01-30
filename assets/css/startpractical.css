@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    min-height:100vh;
+}
+
+/* LAYOUT */
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:260px;
+    background:#1e2b55;
+    color:#fff;
+    padding:25px;
+}
+
+.sidebar-title{
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.menu{ list-style:none; }
+.menu li{ margin-bottom:12px; }
+
+.menu a{
+    display:block;
+    padding:12px 16px;
+    color:#e5e7eb;
+    text-decoration:none;
+    border-radius:6px;
+}
+.menu a:hover{ background:#334155; }
+
+/* PRACTICAL AREA */
+.practical-area{
+    flex:1;
+    padding:30px 40px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    background:#f8fafc;
+}
+
+/* HEADER */
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:12px;
+}
+
+.timer{ font-size:22px; font-weight:700; }
+
+/* STATUS */
+.status-bar{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+}
+
+.progress{
+    margin-top:10px;
+    height:14px;
+    background:#e5e7eb;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    width:0%;
+    background:#22c55e;
+}
+
+/* DETAILS */
+.details{
+    background:#fff;
+    padding:24px;
+    border-radius:12px;
+}
+
+.grid{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.field label{
+    font-size:14px;
+    color:#64748b;
+}
+
+.field input{
+    width:100%;
+    border:none;
+    border-bottom:2px solid #c7d2fe;
+    padding:6px;
+    background:transparent;
+}
+
+/* CAMERA CENTER */
+.camera-action{
+    display:flex;
+    flex-direction:column;
+    align-items:center;   /* ⭐ CENTER */
+    gap:30px;
+}
+
+.camera-section{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;   /* ⭐ CENTER CAMERA */
+}
+
+video{
+    margin-top:15px;
+    width:100%;
+    max-width:650px;
+    border-radius:12px;
+}
+
+/* BUTTON */
+.end-session{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.end-session button{
+    background:#dc2626;
+    color:#fff;
+    border:none;
+    padding:14px 50px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-box{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.modal-actions{
+    margin-top:20px;
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+}
+
+.cancel{
+    background:#e5e7eb;
+    border:none;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+.confirm{
+    background:#dc2626;
+    color:#fff;
+    border:none;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid{ grid-template-columns:1fr; }
+    .layout{ flex-direction:column; }
+    .sidebar{ width:100%; }
+}
+.info{
+    padding:26px 40px;
+    font-size:15px;
+    color:#475569;
+    text-align:center;
+    line-height:1.6;
+}

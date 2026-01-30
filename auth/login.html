@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | PSMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>Login</h2>
+        <p class="subtitle">Practical Session Monitoring System</p>
+
+        <form onsubmit="redirectDashboard(event)">
+            <input type="Id" placeholder="Id" required>
+            <input type="password" placeholder="Password" required>
+            <input type="Rollno" placeholder="Rollno" required>
+            <!-- <input type="full Name" placeholder="Full Name" required>
+            <input type="Rollno" placeholder="Rollno" required>
+           <input type="email" placeholder="Email Address" required>
+            <input type="Department" placeholder="Department" required>
+            <input type="password" placeholder="Password" required> -->
+
+            <select id="role" required>
+    <option value="">Login as</option>
+    <option value="admin">Admin</option>
+    <option value="faculty">Faculty</option>
+    <option value="student">Student</option>
+</select>
+
+
+            <button type="submit">login</a></button>
+           
+        </form>
+
+        <p class="switch">
+            Don't have an account?
+            <a href="StuReg.html">Student Register</a> <br>
+            Don't have an account?
+            <a href="FacultyReg.html">Faculty Register</a>
+        </p>
+    </div>
+</div>
+
+<!-- ✅ JAVASCRIPT (MUST BE HERE) -->
+<script>
+function redirectDashboard(event) {
+    event.preventDefault();
+
+    var role = document.getElementById("role").value;
+
+    if (role === "admin") {
+        window.location.href = "admin.html";
+    } 
+    else if (role === "faculty") {
+        window.location.href = "faculty1.html";
+    } 
+    else if (role === "student") {
+        window.location.href = "studentdashnew1.html";
+    } 
+    else {
+        alert("Please select role");
+    }
+}
+</script>
+
+
+</body>
+</html>

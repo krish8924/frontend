@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Faculty Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/facultydash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>Faculty Portal</h2>
+                    <p>Management System</p>
+                </div>
+            </div>
+
+        <ul class="menu">
+    <li>
+        <a href="#">📟Dashboard</a>
+    </li>
+
+    <li >
+        <a href="./livemonitoring.html">📱Live Monitoring</a>
+    </li>
+
+    <li>
+        <a href="./practical-dashboard.html">📒Manage Practicals</a>
+    </li>
+    <li>
+        <a href="./practicalevaluation.html">📋Evaluation Practical</a>
+    </li>
+
+    <li>
+        <a href="./reports.html">📋Reports</a>
+    </li>
+     <li>
+        <a href="./index.html">🔓LOGOUT</a>
+    </li>
+    <li>
+        <a href="./facultyprofile.html">👨‍🎓Profile</a>
+    </li>
+
+</ul>
+
+
+    </aside>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Faculty Dashboard</h1>
+                    <p>Monitor and manage student activities</p>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <div class="divider"></div>
+                    <div class="user-profile">
+                        <div class="user-avatar">pm</div>
+                        <div class="user-info">
+                            <h3>Dr. Poonam Mam</h3>
+                            <p>Faculty - Computer Science</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Stats Grid -->
+                 <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon primary">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                12%
+                            </div>
+                        </div>
+                        <div class="stat-label">Active Students</div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-description">Currently in lab sessions</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon warning">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-header">
+                            <div></div>
+                            <div class="stat-trend down">
+                                <i class="fas fa-arrow-down"></i>
+                                5%
+                            </div>
+                        </div>
+                        <div class="stat-label">Idle Students</div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-description">Waiting for assignment</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                8%
+                            </div>
+                        </div>
+                        <div class="stat-label">Completed Sessions</div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-description">This week</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon info">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                3%
+                            </div>
+                        </div>
+                        <div class="stat-label">Total Students</div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-description">Across all courses</div>
+                    </div>
+                </div>
+
+                <!-- Filters Section -->
+                <div class="filters-section">
+                    <div class="filters-grid">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search students..." id="searchInput">
+                        </div>
+                        <select id="deptSelect">
+                            <option value="">Select Department</option>
+                            <option value="computer">Computer Engineering</option>
+                            <option value="it">Information Technology</option>
+                            <option value="aids">AI & Data Science</option>
+                        </select>
+                        <select id="subjectSelect">
+                            <option value="">Select Subject</option>
+                            <option value="ds">Data Structures</option>
+                            <option value="dbms">DBMS</option>
+                            <option value="cn">Computer Network</option>
+                            <option value="algo">Algorithms</option>
+                        </select>
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Export Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Table Section -->
+                <div class="table-section">
+                    <div class="table-header">
+                        <h2>Student Activity Monitor</h2>
+                        <button class="icon-btn">
+                            <i class="fas fa-filter"></i>
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Roll No</th>
+                                    <th>Subject</th>
+                                    <th>Status</th>
+                                    <th>Progress</th>
+                                    <th>Last Active</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentTableBody">
+                                <tr>
+                                    <td>
+                                        <div class="student-info">
+                                            <div class="student-avatar">SP</div>
+                                            <span class="student-name">Sandip Patil</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="roll-number">63</span></td>
+                                    <td>Data Structures</td>
+                                    <td>
+                                        <span class="status-badge active">
+                                            <span class="status-dot"></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 85%"></div>
+                                            </div>
+                                            <span class="progress-text">85%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="last-active">2 mins ago</span></td>
+                                    <td>
+                                        <button class="action-btn">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="student-info">
+                                            <div class="student-avatar">SS</div>
+                                            <span class="student-name">Shruti Sharma</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="roll-number">58</span></td>
+                                    <td>DBMS</td>
+                                    <td>
+                                        <span class="status-badge absent">
+                                            <span class="status-dot"></span>
+                                            Absent
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 45%"></div>
+                                            </div>
+                                            <span class="progress-text">45%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="last-active">2 hours ago</span></td>
+                                    <td>
+                                        <button class="action-btn">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="student-info">
+                                            <div class="student-avatar">CK</div>
+                                            <span class="student-name">Chaindana Kumar</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="roll-number">59</span></td>
+                                    <td>Algorithms</td>
+                                    <td>
+                                        <span class="status-badge idle">
+                                            <span class="status-dot"></span>
+                                            Idle
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 72%"></div>
+                                            </div>
+                                            <span class="progress-text">72%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="last-active">15 mins ago</span></td>
+                                    <td>
+                                        <button class="action-btn">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="student-info">
+                                            <div class="student-avatar">RV</div>
+                                            <span class="student-name">Rahul Verma</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="roll-number">61</span></td>
+                                    <td>Data Structures</td>
+                                    <td>
+                                        <span class="status-badge active">
+                                            <span class="status-dot"></span>
+                                            Active
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 92%"></div>
+                                            </div>
+                                            <span class="progress-text">92%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="last-active">1 min ago</span></td>
+                                    <td>
+                                        <button class="action-btn">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="student-info">
+                                            <div class="student-avatar">PS</div>
+                                            <span class="student-name">Priya Singh</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="roll-number">62</span></td>
+                                    <td>Computer Network</td>
+                                    <td>
+                                        <span class="status-badge idle">
+                                            <span class="status-dot"></span>
+                                            Idle
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 68%"></div>
+                                            </div>
+                                            <span class="progress-text">68%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="last-active">8 mins ago</span></td>
+                                    <td>
+                                        <button class="action-btn">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar Toggle Functionality
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            
+            if (sidebar.classList.contains('collapsed')) {
+                toggleIcon.className = 'fas fa-bars';
+            } else {
+                toggleIcon.className = 'fas fa-times';
+            }
+        });
+
+        // Navigation Menu Active State
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (!item.classList.contains('logout')) {
+                    e.preventDefault();
+                    
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const tableBody = document.getElementById('studentTableBody');
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const rows = tableBody.getElementsByTagName('tr');
+            
+            Array.from(rows).forEach(row => {
+                const studentName = row.querySelector('.student-name')?.textContent.toLowerCase() || '';
+                const rollNumber = row.querySelector('.roll-number')?.textContent.toLowerCase() || '';
+                
+                if (studentName.includes(searchTerm) || rollNumber.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Export Report Functionality
+        const exportBtn = document.querySelector('.export-btn');
+        
+        exportBtn.addEventListener('click', () => {
+            alert('Export functionality would download a CSV/PDF report of student data');
+            console.log('Exporting student data...');
+        });
+
+        // Action Menu Functionality
+        const actionBtns = document.querySelectorAll('.action-btn');
+        
+        actionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('Action menu would show options: View Details, Edit, Delete, etc.');
+            });
+        });
+
+        // Department Filter
+        const deptSelect = document.getElementById('deptSelect');
+        
+        deptSelect.addEventListener('change', (e) => {
+            console.log('Department selected:', e.target.value);
+            // Filter logic would go here
+        });
+
+        // Subject Filter
+        const subjectSelect = document.getElementById('subjectSelect');
+        
+        subjectSelect.addEventListener('change', (e) => {
+            console.log('Subject selected:', e.target.value);
+            // Filter logic would go here
+        });
+
+        // Simulate real-time updates (optional)
+        function updateLastActive() {
+            const lastActiveElements = document.querySelectorAll('.last-active');
+            // This would update times in a real application
+        }
+
+        // Call every minute
+        setInterval(updateLastActive, 60000);
+
+        // Responsive sidebar for mobile
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('collapsed');
+                toggleIcon.className = 'fas fa-bars';
+            }
+        });
+
+        // Initialize on load
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add('collapsed');
+            toggleIcon.className = 'fas fa-bars';
+        }
+    </script>

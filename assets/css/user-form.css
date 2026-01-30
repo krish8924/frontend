@@ -1,0 +1,11 @@
+.form-label {
+  font-weight: 500;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+button {
+  min-width: 120px;
+}

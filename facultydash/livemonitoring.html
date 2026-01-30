@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management | PSMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/livemonitoring.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+    <div class="sidebar-title">
+       Faculty Dashboard
+    </div>
+
+    <ul class="menu">
+        <li class="active">
+            <a href="./facultydash.html">📟 Dashboard</a>
+        </li>
+        <li>
+            <a href="./livemonitoring.html">📱 Live Monitoring</a>
+        </li>
+        <li>
+            <a href="./practical-dashboard.html">📒 Manage Practicals</a>
+        </li>
+        <li>
+            <a href="./practicalevaluation.html">📋 Evaluation Practical</a>
+        </li>
+        <li>
+            <a href="./reports.html">📋 Reports</a>
+        </li>
+        <li>
+            <a href="./index.html">🚪 Logout</a>
+        </li>
+    </ul>
+</aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h2>Live Monitoring</h2>
+
+        <div class="top-actions">
+    <input type="text" placeholder="Search student..." class="small-search">
+
+    <select class="filter-select">
+        <option>Filter by Subject</option>
+        <option>Data Structures</option>
+        <option>DBMS</option>
+        <option>Computer Network</option>
+    </select>
+
+    <select class="filter-select">
+        <option>Filter by Practical</option>
+        <option>P01</option>
+        <option>P02</option>
+        <option>P03</option>
+    </select>
+
+    <!-- ADD USER BUTTON -->
+     
+    <a href="../admindash/adduser.html" class="btn primary" >+ Edit User</a>
+    
+</div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll No</th>
+                    <th>Department</th>
+                    <th>Subject</th>
+                    <th>Practical No</th>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                    <th>Last Active</th>
+                    <th>Status</th>
+                    <th>Controls</th>
+                </tr>
+            </thead>
+
+           <tbody>
+    <tr>
+        <td>Sandip Gaikwad</td>
+        <td>63</td>
+        <td>Computer</td>
+        <td>Data Structures</td>
+        <td>P01</td>
+        <td>10:15 AM</td>
+        <td>32 min</td>
+        <td>10:47 AM</td>
+        <td><span class="status active">Active</span></td>
+        <td>
+            <button class="btn mini">View</button>
+            <button class="btn mini outline">End</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Shruti Patil</td>
+        <td>58</td>
+        <td>Computer</td>
+        <td>DBMS</td>
+        <td>P02</td>
+        <td>09:50 AM</td>
+        <td>18 min</td>
+        <td>10:05 AM</td>
+        <td><span class="status idle">Idle</span></td>
+        <td>
+            <button class="btn mini">Resume</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Chaindana More</td>
+        <td>59</td>
+        <td>Computer</td>
+        <td>Computer Network</td>
+        <td>P03</td>
+        <td>09:10 AM</td>
+        <td>25 min</td>
+        <td>09:35 AM</td>
+        <td><span class="status ended">Ended</span></td>
+        <td>
+            <button class="btn mini">Details</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Rahul Deshmukh</td>
+        <td>61</td>
+        <td>Computer</td>
+        <td>Data Structures</td>
+        <td>P01</td>
+        <td>10:05 AM</td>
+        <td>40 min</td>
+        <td>10:45 AM</td>
+        <td><span class="status active">Active</span></td>
+        <td>
+            <button class="btn mini">View</button>
+            <button class="btn mini outline">End</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Neha Kulkarni</td>
+        <td>54</td>
+        <td>Computer</td>
+        <td>DBMS</td>
+        <td>P02</td>
+        <td>09:30 AM</td>
+        <td>22 min</td>
+        <td>09:52 AM</td>
+        <td><span class="status idle">Idle</span></td>
+        <td>
+            <button class="btn mini">Resume</button>
+        </td>
+    </tr>
+
+   
+
+    
+
+
+    <tr>
+        <td>Kiran Jadhav</td>
+        <td>60</td>
+        <td>Computer</td>
+        <td>Computer Network</td>
+        <td>P03</td>
+        <td>09:00 AM</td>
+        <td>35 min</td>
+        <td>09:35 AM</td>
+        <td><span class="status ended">Ended</span></td>
+        <td>
+            <button class="btn mini">Details</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Anjali Pawar</td>
+        <td>56</td>
+        <td>Computer</td>
+        <td>Data Structures</td>
+        <td>P01</td>
+        <td>10:10 AM</td>
+        <td>20 min</td>
+        <td>10:30 AM</td>
+        <td><span class="status active">Active</span></td>
+        <td>
+            <button class="btn mini">View</button>
+            <button class="btn mini outline">End</button>
+        </td>
+    </tr>
+</tbody>
+
+        </table>
+    </div>
+
+</main>
+
+
+</div>
+
+</body>
+</html>

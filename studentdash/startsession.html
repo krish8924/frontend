@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Start Practical Session</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/startsession.css">
+     <script src="../assets/javascript/startsession.js" defer></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="sidebar-title"> Student Dashboard </h2>
+        <ul class="menu">
+            <li><a href="#">📊 Dashboard</a></li>
+            <li><a href="./startpractical.html">👩‍🎓 Profile</a></li>
+            <li><a href="./startsession.html">🖥️ Start Practical</a></li>
+            <li><a href="./summary.html">📜 History</a></li>
+            <li><a href="../facultydash/index.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <h4>Welcome, Chandrakala 👋</h4>
+            <p class="mb-0">Start your practical session securely</p>
+        </div>
+
+        <!-- CARD -->
+        <div class="card shadow p-5">
+
+            <h3 class="text-center mb-4">Start Practical Session</h3>
+
+            <!-- STUDENT DETAILS -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Student Name</label>
+                    <input class="form-control" value="Chandrakala Mahale" readonly>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Roll Number</label>
+                    <input class="form-control" value="59" readonly>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Department</label>
+                    <input class="form-control" value="Computer Engineering" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Academic Year</label>
+                    <input class="form-control" value="Third Year (TE)" readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Batch</label>
+                    <input class="form-control" value="A1" readonly>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- PRACTICAL -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Subject</label>
+                    <select class="form-select" id="subject" onchange="loadPracticals()">
+                        <option value="">-- Select Subject --</option>
+                        <option value="CN">Computer Network</option>
+                        <option value="DBMS">DBMS</option>
+                        <option value="OS">Operating System</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Practical Number</label>
+                    <select class="form-select" id="practicalNo" onchange="setTitle()">
+                        <option value="">-- Select Practical --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Practical Title</label>
+                    <input class="form-control" id="practicalTitle" readonly>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>System / Lab PC</label>
+                    <select class="form-select">
+                        <option>PC-01</option><option>PC-02</option><option>PC-03</option>
+                        <option>PC-05</option><option>PC-06</option><option>PC-07</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="row mt-4">
+                <div class="col-md-6 d-grid mb-2">
+                    <button class="btn btn-success btn-lg"><a href="./startpractical.html">Start Practical Session</a></button>
+                </div>
+                <div class="col-md-6 d-grid mb-2">
+                    <button class="btn btn-danger btn-lg"> End Practical Session</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+     /* background-color: #d4edda; */
+}
+
+body {
+    background: #f4f7fb;
+}
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #1e2b55;
+    color: #fff;
+    padding: 20px;
+}
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+/* .menu li.active a,
+.menu li a:hover {
+    background: #2f3e78;
+    padding: 12px 14px;
+    border-radius: 6px;
+} */
+
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* .menu li.active,
+.menu li:hover {
+    background: #2f3e78;
+} */
+
+/* MAIN */
+.main {
+    padding: 30px;
+}
+
+/* HEADER */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topbar h2 {
+    font-size: 22px;
+}
+
+.search {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #eef1f7;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tab.active {
+    background: #1e4fd8;
+    color: #fff;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn.outline {
+    background: #fff;
+    border: 1px solid #1e4fd8;
+    color: #1e4fd8;
+}
+
+.btn.success {
+    background: #28a745;
+    color: #fff;
+}
+
+/* TABLE */
+.table-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f4fa;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* INPUTS IN TABLE */
+table input,
+table select {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+/* REPORT SECTIONS */
+.report-section {
+    display: none;
+}
+
+.report-section.active {
+    display: block;
+}
+/* FILTER GROUP WITH LABELS */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+
+.filter-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+/* ACTION ROW ALIGNMENT */
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 25px;
+}
+
+/* RIGHT SIDE BUTTONS */
+.right-actions {
+    display: flex;
+    gap: 10px;
+}

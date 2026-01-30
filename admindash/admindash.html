@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SAME CSS -->
+  <link rel="stylesheet" href="../assets/css/facultydash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <i class="fas fa-user-shield"></i>
+      </div>
+      <div class="logo-text">
+        <h2>Admin Portal</h2>
+        <p>System Control</p>
+      </div>
+    </div>
+
+    <ul class="menu">
+      <li><a href="./admindash.html">📊 Dashboard</a></li>
+      <li><a href="./users.html">👥 User Management</a></li>
+      <li><a href="./acadmicsetup.html">📘 Academic Setup</a></li>
+      <li><a href="../auth/login.html">🔓 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-left">
+        <h1>Admin Dashboard</h1>
+        <p>Monitor system activity & manage users</p>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn">
+          <i class="fas fa-bell"></i>
+          <span class="badge"></span>
+        </button>
+        <button class="icon-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+        <div class="divider"></div>
+
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <div class="user-info">
+            <h3>System Admin</h3>
+            <p>Administrator</p>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content-area">
+
+      <!-- STATS -->
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon primary">
+              <i class="fas fa-users"></i>
+            </div>
+          </div>
+          <div class="stat-label">Total Users</div>
+          <div class="stat-value">150</div>
+          <div class="stat-description">Students + Faculty</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon success">
+              <i class="fas fa-play-circle"></i>
+            </div>
+          </div>
+          <div class="stat-label">Active Sessions</div>
+          <div class="stat-value">12</div>
+          <div class="stat-description">Currently running</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon warning">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="stat-label">Idle Sessions</div>
+          <div class="stat-value">5</div>
+          <div class="stat-description">No activity detected</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon info">
+              <i class="fas fa-book"></i>
+            </div>
+          </div>
+          <div class="stat-label">Subjects</div>
+          <div class="stat-value">24</div>
+          <div class="stat-description">Across departments</div>
+        </div>
+
+      </div>
+
+      <!-- FILTERS -->
+      <div class="filters-section">
+        <div class="filters-grid">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search users...">
+          </div>
+
+          <select>
+            <option>Select Role</option>
+            <option>Student</option>
+            <option>Faculty</option>
+            <option>Admin</option>
+          </select>
+
+          <select>
+            <option>Select Department</option>
+            <option>Computer</option>
+            <option>IT</option>
+            <option>AI & DS</option>
+          </select>
+
+          <button class="export-btn">
+            <i class="fas fa-download"></i>
+            Export Data
+          </button>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-section">
+        <div class="table-header">
+          <h2>System Activity Log</h2>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Role</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Last Login</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Rahul Patil</td>
+                <td>Student</td>
+                <td>Computer</td>
+                <td><span class="status-badge active"><span class="status-dot"></span>Active</span></td>
+                <td>2 mins ago</td>
+                <td><button class="action-btn"><i class="fas fa-ellipsis-v"></i></button></td>
+              </tr>
+
+              <tr>
+                <td>Neha Kulkarni</td>
+                <td>Faculty</td>
+                <td>IT</td>
+                <td><span class="status-badge idle"><span class="status-dot"></span>Idle</span></td>
+                <td>15 mins ago</td>
+                <td><button class="action-btn"><i class="fas fa-ellipsis-v"></i></button></td>
+              </tr>
+
+              <tr>
+                <td>Pooja Naik</td>
+                <td>Admin</td>
+                <td>Admin</td>
+                <td><span class="status-badge active"><span class="status-dot"></span>Active</span></td>
+                <td>1 hour ago</td>
+                <td><button class="action-btn"><i class="fas fa-ellipsis-v"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

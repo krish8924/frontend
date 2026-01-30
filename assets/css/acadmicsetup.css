@@ -1,0 +1,12 @@
+/* Academic setup */
+.academic-table th {
+  background-color: #f8f9fa;
+}
+
+.academic-table td {
+  vertical-align: middle;
+}
+
+.academic-actions button {
+  margin-right: 6px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add User Modal</title>
+<link rel="stylesheet" href="../assets/css/adduser.css">
+</head>
+<body>
+
+<div class="overlay">
+    <div class="modal">
+
+        <!-- Header -->
+        <div class="modal-header">
+            <h3>Add User</h3>
+            <span class="close-btn">&times;</span>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+
+            <!-- Row 1: Full Name + Role -->
+            <div class="form-row double">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label>Role</label>
+                    <select>
+                        <option>Student</option>
+                        <option>Faculty</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 2: Department + Academic Year -->
+            <div class="form-row double">
+                <div class="input-box">
+                    <label>Department</label>
+                    <select>
+                        <option>Select Department</option>
+                        <option>Computer</option>
+                        <option>IT</option>
+                        <option>ENTC</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>Academic Year</label>
+                    <select>
+                        <option>Select Year</option>
+                        <option>FE</option>
+                        <option>SE</option>
+                        <option>TE</option>
+                        <option>BE</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 3: Batch + Status -->
+            <div class="form-row double">
+                <div class="input-box">
+                    <label>Batch</label>
+                    <select>
+                        <option>Select Batch</option>
+                        <option>2022-26</option>
+                        <option>2023-27</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>Status</label>
+                    <select>
+                        <option>Active</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 4: Email -->
+            <div class="form-row">
+                <div class="input-box full-width">
+                    <label>Email / Username</label>
+                    <input type="text">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-primary" id="addUserBtn">Add User</button>
+            <button class="btn-secondary" id="cancelBtn">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script>
+// Close modal
+document.querySelector(".close-btn").addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "none";
+});
+
+document.getElementById("cancelBtn").addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "none";
+});
+
+// Add User button click
+document.getElementById("addUserBtn").addEventListener("click", () => {
+
+    // 🔔 ALERT POPUP
+    alert("✅ User added successfully!");
+    
+
+    // Close modal after alert
+    document.querySelector(".overlay").style.display = "none";
+
+    // Clear inputs
+    document.querySelectorAll(".modal-body input").forEach(input => input.value = "");
+    document.querySelectorAll(".modal-body select").forEach(select => select.selectedIndex = 0);
+});
+</script>
+
+
+</body>
+</html>

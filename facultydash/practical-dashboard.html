@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical Management | PSMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/practical.css">
+</head>
+<body>
+
+<!-- <div class="layout"> -->
+
+  <div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-title">
+            Faculty Dashboard
+        </div>
+
+        <ul class="menu">
+    <li>
+        <a href="./facultydash.html">📟Dashboard</a>
+    </li>
+
+    <li >
+        <a href="./livemonitoring.html">📱Live Monitoring</a>
+    </li>
+
+    <li>
+        <a href="./practical-dashboard.html">📒Manage Practicals</a>
+    </li>
+    <li>
+        <a href="./practicalevaluation.html">📋Evaluation Practical</a>
+    </li>
+
+    <li>
+        <a href="./reports.html">📋Reports</a>
+    </li>
+     <li>
+        <a href="./index.html">LOGOUT</a>
+    </li>
+
+</ul>
+
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <div class="topbar">
+            <h2>Add Practical</h2>
+            <a href="./add-practical.html" class="btn primary">+ Add Practical</a>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters">
+    <select>
+        <option>Department</option>
+        <option>Computer</option>
+        <option>IT</option>
+        <option>AIDS</option>
+    </select>
+
+    <select>
+        <option>Year</option>
+        <option>Third Year</option>
+        <option>Second Year</option>
+        <option>First Year</option>
+    </select>
+
+    <select>
+        <option>Subject</option>
+        <option>DBMS</option>
+        <option>DSA</option>
+        <option>OOP</option>
+    </select>
+</div>
+
+
+        <!-- TABLE -->
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Practical No.</th>
+                        <th>Subject</th>
+                        <th>Practical</th>
+                        <th>Status</th>
+                        <th>Controls</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>P001</td>
+                        <td>Data Structures</td>
+                        <td>P001</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="btn mini">Edit</button>
+                            <button class="btn mini">Disable</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>P002</td>
+                        <td>Data Structures</td>
+                        <td>P002</td>
+                        <td><span class="status idle">Idle</span></td>
+                        <td>
+                            <button class="btn mini">Edit</button>
+                            <button class="btn mini">Disable</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>P001</td>
+                        <td>DBMS</td>
+                        <td>P001</td>
+                        <td><span class="status idle">Idle</span></td>
+                        <td>
+                            <button class="btn mini">Edit</button>
+                            <button class="btn mini">Publish</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>A002</td>
+                        <td>Dynamic Sort</td>
+                        <td>A002</td>
+                        <td><span class="status ended">Ended</span></td>
+                        <td>
+                            <button class="btn mini">Edit</button>
+                            <button class="btn mini">Publish</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

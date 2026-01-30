@@ -1,0 +1,194 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =====================
+   BACKGROUND
+===================== */
+body {
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at top,
+        #ff7aa2,
+        #6a5acd,
+        #2b193f
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =====================
+   AUTH CONTAINER
+===================== */
+.auth-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* =====================
+   AUTH BOX (GLASS UI)
+===================== */
+.auth-box {
+    max-width: 420px;
+    margin: auto;
+    padding: 40px 35px;
+    border-radius: 28px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.05)
+    );
+    backdrop-filter: blur(18px);
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.2);
+    text-align: center;
+    animation: fadeIn 0.9s ease;
+}
+
+/* =====================
+   AVATAR
+===================== */
+.avatar-circle {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        #ffb3c6,
+        #ff6f91
+    );
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+}
+
+/* =====================
+   TITLE
+===================== */
+.auth-box h2 {
+    color: #fff;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 28px;
+}
+
+/* =====================
+   FORM INPUTS
+===================== */
+.auth-box input,
+.auth-box select {
+    width: 100%;
+    padding: 14px 14px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.auth-box input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.auth-box input:focus,
+.auth-box select:focus {
+    background: rgba(255,255,255,0.22);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.auth-box select {
+    color: #fff;
+}
+
+.auth-box option {
+    color: #000;
+}
+
+/* =====================
+   BUTTON
+===================== */
+.auth-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(
+        90deg,
+        #ff6f91,
+        #6a5acd
+    );
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.auth-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* =====================
+   SWITCH LINK
+===================== */
+.switch {
+    margin-top: 18px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+.switch a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   ANIMATION
+===================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 30px 25px;
+        border-radius: 22px;
+    }
+}
+

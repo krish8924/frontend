@@ -1,0 +1,14 @@
+/* User table */
+.user-table th,
+.user-table td {
+  vertical-align: middle;
+}
+
+.user-table .badge {
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.user-actions button {
+  margin-right: 5px;
+}

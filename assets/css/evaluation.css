@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #1e2b55;
+    color: #fff;
+    padding: 20px;
+}
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+/* .menu li.active a,
+.menu li a:hover {
+    background: #2f3e78;
+    padding: 12px 14px;
+    border-radius: 6px;
+} */
+
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* .menu li.active,
+.menu li:hover {
+    background: #2f3e78;
+} */
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+}
+
+/* TABLE */
+.table-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+thead {
+    background: #f1f4fa;
+}
+
+/* INPUTS */
+table input,
+table select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* STATUS COLORS */
+.success {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.warning {
+    color: #d97706;
+    font-weight: 600;
+}
+
+.danger {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* ACTION BAR */
+.action-bar {
+    padding: 20px;
+    text-align: right;
+}
+
+/* BUTTON */
+.btn.primary {
+    padding: 12px 28px;
+    background: #1e4fd8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}

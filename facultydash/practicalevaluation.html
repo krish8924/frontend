@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical Evaluation | Faculty</title>
+    <link rel="stylesheet" href="../assets/css/evaluation.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-title">
+            Faculty Dashboard
+        </div>
+
+        <ul class="menu">
+    <li>
+        <a href="./facultydash.html">📟Dashboard</a>
+    </li>
+
+    <li >
+        <a href="./livemonitoring.html">📱Live Monitoring</a>
+    </li>
+
+    <li>
+        <a href="./practical-dashboard.html">📒Manage Practicals</a>
+    </li>
+    <li>
+        <a href="./practicalevaluation.html">📋Evaluation Practical</a>
+    </li>
+
+    <li>
+        <a href="./reports.html">📋Reports</a>
+    </li>
+     <li>
+        <a href="./index.html">LOGOUT</a>
+    </li>
+
+</ul>
+
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <h2>Practical Evaluation </h2>
+
+        <div class="table-card">
+            <form onsubmit="return showAlert()">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Roll Number</th>
+                            <th>Subject</th>
+                            <th>Practical No.</th>
+                            <th>Session Duration</th>
+                            <th>Completion Status</th>
+                            <th>Marks Obtained</th>
+                            <th>Remarks</th>
+                            <th>Evaluation Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>John Student</td>
+                            <td>CS21</td>
+                            <td>Data Structures</td>
+                            <td>P01</td>
+                            <td>30 min</td>
+                            <td class="success">Completed</td>
+
+                            <td>
+                                <input type="number" name="marks[]" min="0" max="10" placeholder="0-10">
+                            </td>
+
+                            <td>
+                                <input type="text" name="remarks[]" placeholder="Good work">
+                            </td>
+
+                            <td>
+                                <select name="status[]">
+                                    <option>Completed</option>
+                                    <option>partial completed</option>
+                                    <option>pending</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Alex Kumar</td>
+                            <td>CS24</td>
+                            <td>Data Structures</td>
+                            <td>P01</td>
+                            <td>18 min</td>
+                            <td class="warning">Incomplete</td>
+
+                            <td>
+                                <input type="number" name="marks[]" min="0" max="10">
+                            </td>
+
+                            <td>
+                                <input type="text" name="remarks[]" placeholder="Needs improvement">
+                            </td>
+
+                            <td>
+                                <select name="status[]">
+                                    <option>Incomplete</option>
+                                    <option> partial Completed</option>
+                                    <option>pending</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Rahul Patil</td>
+                            <td>CS29</td>
+                            <td>Data Structures</td>
+                            <td>P01</td>
+                            <td>0 min</td>
+                            <td class="danger">Absent</td>
+
+                            <td>
+                                <input type="number" name="marks[]" value="0" disabled>
+                            </td>
+
+                            <td>
+                                <input type="text" name="remarks[]" value="Absent" disabled>
+                            </td>
+
+                            <td>
+                                <select name="status[]">
+                                    <option>Completed</option>
+                                    <option> partial Completed</option>
+                                    <option>pending</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="action-bar">
+                    <button type="submit" class="btn primary">Save Evaluation</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</div>
+<script>
+function showAlert() {
+    alert("✅ Evaluation saved successfully!");
+    return false; // stop page reload
+}
+</script>
+
+
+</body>
+</html>
